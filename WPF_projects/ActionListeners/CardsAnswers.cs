@@ -22,5 +22,6 @@ namespace WPF_projects.ActionListeners
             // gets the next question
             return answerManager.GetNextItem();
         }
+
     }
 }

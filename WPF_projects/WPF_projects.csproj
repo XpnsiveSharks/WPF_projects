@@ -159,8 +159,8 @@
     <Compile Include="ActionListeners\CardsQuestions.cs" />
     <Compile Include="ActionListeners\PlayNormalClass.cs" />
     <Compile Include="ActionListeners\QuestionAnswerManager.cs" />
-    <Compile Include="DashboardXaml.xaml.cs">
-      <DependentUpon>DashboardXaml.xaml</DependentUpon>
+    <Compile Include="UI\NormalGame.xaml.cs">
+      <DependentUpon>NormalGame.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -174,26 +174,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="DashboardXaml.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PlayNormal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PlaySpace.xaml">
+    <Page Include="UI\NormalGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlayNormal.xaml.cs">
-      <DependentUpon>PlayNormal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PlaySpace.xaml.cs">
-      <DependentUpon>PlaySpace.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

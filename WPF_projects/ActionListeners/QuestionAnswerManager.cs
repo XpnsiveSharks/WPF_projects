@@ -50,10 +50,5 @@ namespace WPF_projects.ActionListeners
                 return default(T);
             }
         }
-
-   /*     public void ClearItem()
-        {
-            currentIndex = -1; // Reset the index
-        }*/
     }
 }
