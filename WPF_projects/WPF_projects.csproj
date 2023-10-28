@@ -27,7 +27,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -65,7 +65,8 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>sharks %282%29.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
@@ -155,25 +156,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ActionListeners\AddQuestionsAnswers.cs" />
     <Compile Include="ActionListeners\CardsAnswers.cs" />
     <Compile Include="ActionListeners\CardsQuestions.cs" />
     <Compile Include="ActionListeners\PlayNormalClass.cs" />
     <Compile Include="ActionListeners\QuestionAnswerManager.cs" />
+    <Compile Include="DB\DBConn.cs" />
+    <Compile Include="UI\AddDeck.xaml.cs">
+      <DependentUpon>AddDeck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginForm.xaml.cs">
+      <DependentUpon>LoginForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\NormalGame.xaml.cs">
       <DependentUpon>NormalGame.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="UI\AddDeck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\LoginForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\NormalGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -208,12 +217,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="shark.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="sharklogo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="ProjectLogo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -229,9 +232,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="sharks %282%29.ico" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Resources\sharklogo.png" />
+    <Resource Include="Resources\ProjectLogo.png" />
     <Content Include="RevAppDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

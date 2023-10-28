@@ -17,7 +17,6 @@ namespace WPF_projects.ActionListeners
             items = new List<T>();
             LoadItemsFromDatabase(connectionString, query);
         }
-
         private void LoadItemsFromDatabase(string connectionString, string query)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

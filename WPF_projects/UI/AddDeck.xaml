@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPF_projects.UI.AddDeck"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_projects.UI"
+        mc:Ignorable="d"
+        Title="AddDeck" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="dgCards" HorizontalAlignment="Center" Height="306" Margin="0,268,0,0" VerticalAlignment="Top" Width="780" AutoGenerateColumns="True" />
+        <TextBox x:Name="txtQuestions" HorizontalAlignment="Left" Height="105" Margin="25,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="473"/>
+        <Label Content="Insert Questions here" HorizontalAlignment="Left" Height="32" Margin="25,10,0,0" VerticalAlignment="Top" Width="197"/>
+        <TextBox x:Name="txtAnswers" HorizontalAlignment="Left" Height="30" Margin="25,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="473"/>
+        <Label Content="Insert Answers here" HorizontalAlignment="Left" Height="32" Margin="25,169,0,0" VerticalAlignment="Top" Width="197"/>
+        <Button x:Name="btnAdd" Content="Insert" HorizontalAlignment="Left" Height="35" Margin="598,201,0,0" VerticalAlignment="Top" Width="171" Click="btnAdd_Click"/>
+
+    </Grid>
+</Window>

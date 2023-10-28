@@ -4,8 +4,6 @@
              xmlns:local="clr-namespace:WPF_projects"
              StartupUri="UI/NormalGame.xaml">
 
-            
-
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

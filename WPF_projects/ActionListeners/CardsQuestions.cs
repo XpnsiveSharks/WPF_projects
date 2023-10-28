@@ -23,7 +23,12 @@ namespace WPF_projects.ActionListeners
         public string GetNextQuestion()
         {
             // gets the next question
-            return questionManager.GetNextItem();
+            string nextAnswer = questionManager.GetNextItem();
+            if(string.IsNullOrEmpty(nextAnswer))
+            {
+                return "No more answers availables.";
+            }
+            return nextAnswer;
         }
 
        /* public void ClearCurrentQuestion()

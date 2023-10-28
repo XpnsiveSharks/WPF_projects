@@ -39,6 +39,7 @@ namespace WPF_projects.UI
             ShowButtons();
             txtbxAnswer.Text = ans.GetNextAnswer();
         }
+
         private void btnEasy_Click(object sender, RoutedEventArgs e)
         {
             HideButtons();
@@ -96,5 +97,6 @@ namespace WPF_projects.UI
             txtbxAnswer.Text = string.Empty;
             lblQuestion.Text = cq.GetNextQuestion();
         }
+
     }
 }

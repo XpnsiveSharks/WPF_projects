@@ -19,9 +19,14 @@ namespace WPF_projects.ActionListeners
         }
         public string GetNextAnswer()
         {
-            // gets the next question
-            return answerManager.GetNextItem();
+            string nextAnswer = answerManager.GetNextItem();
+            if (string.IsNullOrEmpty(nextAnswer))
+            {
+                return "No more answers availables.";
+            }
+            return nextAnswer;
         }
+
 
     }
 }
