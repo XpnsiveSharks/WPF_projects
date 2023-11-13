@@ -105,7 +105,9 @@
     <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.1.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -162,6 +164,14 @@
     <Compile Include="ActionListeners\PlayNormalClass.cs" />
     <Compile Include="ActionListeners\QuestionAnswerManager.cs" />
     <Compile Include="DB\DBConn.cs" />
+    <Compile Include="ScrambleWords\Commons\CoreOjects.cs" />
+    <Compile Include="ScrambleWords\Commons\InsertDataToCollections.cs" />
+    <Compile Include="ScrambleWords\Commons\CollectionAttributes.cs" />
+    <Compile Include="ScrambleWords\Commons\PopulateWords.cs" />
+    <Compile Include="ScrambleWords\Commons\ScrambledWordsInfo.cs" />
+    <Compile Include="ScrambleWords\Views\GameForm.xaml.cs">
+      <DependentUpon>GameForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\AddDeck.xaml.cs">
       <DependentUpon>AddDeck.xaml</DependentUpon>
     </Compile>
@@ -175,6 +185,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ScrambleWords\Views\GameForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\AddDeck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -242,6 +256,7 @@
       <DependentUpon>RevAppDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
