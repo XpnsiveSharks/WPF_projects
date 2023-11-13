@@ -9,13 +9,15 @@ namespace WPF_projects.ScrambleWords.Commons
         private static List <int> usedNumberEasy = new List <int> ();
         private static List<int> usedNumberAverage = new List<int>();
         private static List<int> usedNumberDifficult = new List<int>();
-        
-        
+
+        public static object InsertDataCollections { get; private set; }
+
         public static string CheckUsedInteger()
         {
             int num = RandomNumberGenerator(usedNumberEasy); // pass the usedNumberEasy List in the method parameter RandomNumberGenerator then stored to variable num
-            return InserDataCollections.PrintThis(num); // randomize num will pass in the PrintThis method from InserDataCollections
+            return InsertDataToCollections.BrowseCollection(num);
         }
+
         private static int RandomNumberGenerator(List <int> usedNumber)// Generates a random number and checks if the number generated has been used
         {
             Random random = new Random();
@@ -32,5 +34,7 @@ namespace WPF_projects.ScrambleWords.Commons
             usedNumberEasy.Add(numberCollection[index]); // Add the generated number to the usedNumberEasy list
             return numberCollection[index]; // Return the generated number
         }
+
+
     }
 }

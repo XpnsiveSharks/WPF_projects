@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace WPF_projects.ScrambleWords.Commons
 {
-    public class InserDataCollections<TSelectedAtt>
+    public class InsertDataToCollections
     {
         public static List<CollectionAttributes> _easy = new List<CollectionAttributes>()
         {
@@ -28,13 +28,12 @@ namespace WPF_projects.ScrambleWords.Commons
             new CollectionAttributes {ID = 7, WORD = "encrypt", HINT = "Securely encode information.", DIFFICULTY = "average", SCORE = 2},
             new CollectionAttributes {ID = 8, WORD = "firewall", HINT = "A barrier to prevent unauthorized access in a network.", DIFFICULTY = "average", SCORE = 2}
         };
-        public static string PrintThis(int randomNum)
+        public static string BrowseCollection(int randomNum, string attr)
         {
             Dictionary<int, CollectionAttributes> LookUp = new Dictionary<int, CollectionAttributes>();
-            foreach (var info in _average)
-            {
+            foreach (var info in _average)    
                 LookUp.Add(info.ID, info);
-            }
+            
             return LookUp[randomNum].WORD;
         }
     }

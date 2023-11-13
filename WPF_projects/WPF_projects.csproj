@@ -165,6 +165,7 @@
     <Compile Include="ActionListeners\QuestionAnswerManager.cs" />
     <Compile Include="DB\DBConn.cs" />
     <Compile Include="ScrambleWords\Commons\CoreOjects.cs" />
+    <Compile Include="ScrambleWords\Commons\InserDataCollections.cs" />
     <Compile Include="ScrambleWords\Commons\InsertDataToCollections.cs" />
     <Compile Include="ScrambleWords\Commons\CollectionAttributes.cs" />
     <Compile Include="ScrambleWords\Commons\PopulateWords.cs" />
